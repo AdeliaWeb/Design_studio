@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, minimum-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+              rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css?">
+        <link rel="stylesheet"
+              href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+        <link
+              rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+        <script
+                src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script defer
+                src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <title>Студия интерьера "Пряничный домик"</title>
+        <link rel="icon" type="image/png" href="img/favicon.png?">
+    </head>
+
+    <body x-data="{ yCoord: window.pageYOffset, mobileOpen: false }"
+          @scroll.window.throttle.50ms="
+            yCoord=window.pageYOffset">
+        <header>
+            <div class="contacts">
+                <div class="inner">
+                    <span class="address">
+                        <i class="uil uil-map-marker-alt"></i>
+                        г. Уфа, ул. Ленина д. 28
+                    </span>
+                    <span class="workhours">
+                        <i class="uil uil-clock"></i>
+                        Пн—Cб: 10:00—19:00
+                    </span>
+                    <div class="social">
+                        Соцсети:
+                        <a href="https://vk.com/">
+                            <i class="uil uil-vk-alt"></i>
+                        </a>
+                        <a href="https://whatsapp.com/">
+                            <i class="uil uil-whatsapp"></i>
+                        </a>
+                        <a href="https://telegram.org/">
+                            <i class="uil uil-telegram-alt"></i>
+                        </a>
+                    </div>
+                    <a class="mail" href="mailto:info@domik.ru">
+                        <i class="uil uil-envelope"></i>
+                        info@domik.ru
+                    </a>
+                    <a class="phone" href="tel:+74952780000">
+                        <i class="uil uil-phone-alt"></i>
+                        8 495 278-00-00
+                    </a>
+                    <a href="#callback" class="base-button">
+                        Заказать звонок
+                    </a>
+                </div>
+            </div>
+            <div class="top-menu">
+                <div class="items left">
+                    <a href="#about">О компании</a>
+                    <a href="#services">Услуги и цены</a>
+                    <a href="#projects">Проекты</a>
+                </div>
+                <a href="" class="logo">
+                    <img src="img/logo-house.png" alt="">
+                    <span class="logo-name">Пряничный домик</span>
+                    <span class="logo-studio">студия интерьера</span>
+                </a>
+                <div class="items right">
+                    <a href="#stages">Этапы работ</a>
+                    <a href="#reviews">Отзывы</a>
+                    <a href="#contacts">Контакты</a>
+                </div>
+                <div class="mobile-menu" @click="mobileOpen=!mobileOpen">
+                    <i class="uil uil-bars"></i>
+                </div>
+                <div class="mobile-items" x-show="mobileOpen" x-transition.opacity>
+                    <a href="#about">О компании</a>
+                    <a href="#services">Услуги и цены</a>
+                    <a href="#projects">Проекты</a>
+                    <a href="#stages">Этапы работ</a>
+                    <a href="#reviews">Отзывы</a>
+                    <a href="#contacts">Контакты</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="up-button"
+             x-show="yCoord>300"
+             @click="window.scrollTo(0, 0);"
+             x-transition.opacity.200ms>
+            <span>🡑</span>
+        </div>
+
+        <main>
+            <section class="hero">
+                <div class="swiper main-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="background">
+                                <img src="img/bg-1.jpg" alt="">
+                            </div>
+                            <div class="foreground">
+                                <h2>Подготовим дизайн-проект квартиры</h2>
+                                <p>Сделаем 3D-визуализацию, подготовим список
+                                    материалов, рассчитаем стоимость</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="background">
+                                <img src="img/bg-2.jpg" alt="">
+                            </div>
+                            <div class="foreground">
+                                <h2>Согласуем перепланировку</h2>
+                                <p>Получим разрешение Жилстройнадзора на
+                                    изменение границ квартиры и замену газовой
+                                    плиты</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="background">
+                                <img src="img/bg-3.jpg" alt="">
+                            </div>
+                            <div class="foreground">
+                                <h2>Сделаем ремонт</h2>
+                                <p>Сделаем 3D-визуализацию, подготовим список
+                                    материалов, рассчитаем стоимость</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper thumbs-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <span class="number">
+                                1
+                            </span>
+                            <span class="text">
+                                Подготовим дизайн-проект квартиры
+                            </span>
+                        </div>
+                        <div class="swiper-slide">
+                            <span class="number">
+                                2
+                            </span>
+                            <span class="text">
+                                Согласуем перепланировку
+                            </span>
+                        </div>
+                        <div class="swiper-slide">
+                            <span class="number">
+                                3
+                            </span>
+                            <span class="text">
+                                Сделаем ремонт
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about" id="about">
+                <div class="container">
+                    <div class="info">
+                        <h2>О компании</h2>
+                        <div>
+                            <h1>Студия интерьера "Пряничный домик"</h1>
+                            <p>
+                                Студия интерьера «Пряничный домик» предлагает
+                                услуги
+                                по
+                                созданию уютных и стильных интерьеров. Мы
+                                создаём
+                                оригинальные дизайнерские проекты квартир и
+                                загородных
+                                домов.
+                            </p>
+                        </div>
+                        <div class="merits">
+                            <div class="merit">
+                                <img src="img/why1.svg" alt="">
+                                <span>Создаем интерьеры, в которых действительно
+                                    комфортно жить</span>
+                            </div>
+                            <div class="merit">
+                                <img src="img/why3.svg" alt="">
+                                <span>Комплексный подход — экономия времени, сил
+                                    и
+                                    финансов</span>
+                            </div>
+                            <div class="merit">
+                                <img src="img/why4.svg" alt="">
+                                <span>Ремонт без ошибок</span>
+                            </div>
+                            <div class="merit">
+                                <img src="img/why5.svg" alt="">
+                                <span>Фиксированная стоимость и сроки</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-img">
+                        <img src="img/about.jpg" alt="">
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="services" id="services">
+                <div class="container">
+                    <h2>Услуги</h2>
+                    <div class="items">
+                        <div class="item">
+                            <img src="img/services-1.jpeg" alt="">
+                            <h4>Дизайн квартиры</h4>
+                            <span class="cost">2500 ₽ за кв.м.</span>
+                        </div>
+                        <div class="item">
+                            <img src="img/services-2.jpeg" alt="">
+                            <h4>Дизайн загородного дома</h4>
+                            <span class="cost">4000 ₽ за кв.м.</span>
+                        </div>
+                        <div class="item">
+                            <img src="img/services-3.jpeg" alt="">
+                            <h4>3D-визуализация</h4>
+                            <span class="cost">5000 ₽</span>
+                        </div>
+                        <div class="item">
+                            <img src="img/services-4.jpeg" alt="">
+                            <h4>Подбор материалов и декора</h4>
+                            <span class="cost">5000 ₽</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="projects" id="projects">
+                <div class="container">
+                    <h2>Последние проекты</h2>
+                    <div class="items">
+                        <div class="item"
+                             x-data="{
+                                swiper: 0,
+                                galleryOpen: false,
+                                 }">
+                            <div class="main-img" @click="galleryOpen=true">
+                                <img src="img/projects/1/001__461.jpg" alt="">
+                            </div>
+                            <span class="name">ЖК «Tau House», г. Уфа</span>
+                            <div class="modal-wrap" x-show="galleryOpen" x-transition.opacity>
+                                <div class="gallery"
+                                     id="gal-1"
+                                     @click.away="galleryOpen=false"
+                                     x-init="
+                                     swiper = new Swiper('#gal-1 .swiper', {
+                                        direction: 'horizontal',
+                                        loop: true,
+                                        spaceBetween: 8,
+                                        pagination: {
+                                            el: '.swiper-pagination',
+                                            type: 'fraction',
+                                        },
+                                        navigation: {
+                                            nextEl: '.swiper-button-next',
+                                            prevEl: '.swiper-button-prev',
+                                        },
+                                        });">
+                                    <button class="close"
+                                            @click="galleryOpen=false">
+                                        <i class="uil uil-multiply"></i>
+                                    </button>
+                                    <span class="name">ЖК «Tau House», г.
+                                        Уфа</span>
+                                    <div class="swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/1/001__461.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/1/002__976.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/1/003__95.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/1/004__715.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/1/005__813.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/1/006__256.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/1/007__29.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/1/008__595.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/1/009__249.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/1/010__844.jpg"
+                                                     alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item"
+                             x-data="{
+                                swiper: 0,
+                                galleryOpen: false,
+                                 }">
+                            <div class="main-img" @click="galleryOpen=true">
+                                <img src="img/projects/3/0000_895.jpg" alt="">
+                            </div>
+                            <span class="name">ЖК «River Sky», г. Москва</span>
+                            <div class="modal-wrap" x-show="galleryOpen" x-transition.opacity>
+                                <div class="gallery"
+                                     id="gal-2"
+                                     @click.away="galleryOpen=false"
+                                     x-init="
+                                     swiper = new Swiper('#gal-2 .swiper', {
+                                        direction: 'horizontal',
+                                        loop: true,
+                                        spaceBetween: 8,
+                                        pagination: {
+                                            el: '.swiper-pagination',
+                                            type: 'fraction',
+                                        },
+                                        navigation: {
+                                            nextEl: '.swiper-button-next',
+                                            prevEl: '.swiper-button-prev',
+                                        },
+                                        });">
+                                    <button class="close"
+                                            @click="galleryOpen=false">
+                                        <i class="uil uil-multiply"></i>
+                                    </button>
+                                    <span class="name">ЖК «River Sky», г.
+                                        Москва</span>
+                                    <div class="swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/3/0000_895.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/3/0001_573.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/3/0002_692.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/3/0003_518.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/3/0006_600.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/3/0007_474.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/3/0008_854.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/3/0009_464.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/3/0010_589.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/3/0011_838.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/3/0012_766.jpg"
+                                                     alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item"
+                             x-data="{
+                                swiper: 0,
+                                galleryOpen: false,
+                                 }">
+                            <div class="main-img" @click="galleryOpen=true">
+                                <img src="img/projects/2/2 (1).jpg" alt="">
+                            </div>
+                            <span class="name">ЖК «Квартал Мира», г. Уфа</span>
+                            <div class="modal-wrap" x-show="galleryOpen" x-transition.opacity>
+                                <div class="gallery"
+                                     id="gal-2"
+                                     @click.away="galleryOpen=false"
+                                     x-init="
+                                     swiper = new Swiper('#gal-2 .swiper', {
+                                        direction: 'horizontal',
+                                        loop: true,
+                                        spaceBetween: 8,
+                                        pagination: {
+                                            el: '.swiper-pagination',
+                                            type: 'fraction',
+                                        },
+                                        navigation: {
+                                            nextEl: '.swiper-button-next',
+                                            prevEl: '.swiper-button-prev',
+                                        },
+                                        });">
+                                    <button class="close"
+                                            @click="galleryOpen=false">
+                                        <i class="uil uil-multiply"></i>
+                                    </button>
+                                    <span class="name">ЖК «Квартал Мира», г.
+                                        Уфа</span>
+                                    <div class="swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/2/2 (1).jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/2/2 (2).jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/2/2 (3).jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/2/2 (4).jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/2/2 (5).jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/2/2 (6).jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/2/2 (7).jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/2/2 (8).jpg"
+                                                     alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item"
+                             x-data="{
+                                swiper: 0,
+                                galleryOpen: false,
+                                 }">
+                            <div class="main-img" @click="galleryOpen=true">
+                                <img src="img/projects/4/4 (1).jpg" alt="">
+                            </div>
+                            <span class="name">ЖК «Central Park», г. Уфа</span>
+                            <div class="modal-wrap" x-show="galleryOpen" x-transition.opacity>
+                                <div class="gallery"
+                                     id="gal-2"
+                                     @click.away="galleryOpen=false"
+                                     x-init="
+                                     swiper = new Swiper('#gal-2 .swiper', {
+                                        direction: 'horizontal',
+                                        loop: true,
+                                        spaceBetween: 8,
+                                        pagination: {
+                                            el: '.swiper-pagination',
+                                            type: 'fraction',
+                                        },
+                                        navigation: {
+                                            nextEl: '.swiper-button-next',
+                                            prevEl: '.swiper-button-prev',
+                                        },
+                                        });">
+                                    <button class="close"
+                                            @click="galleryOpen=false">
+                                        <i class="uil uil-multiply"></i>
+                                    </button>
+                                    <span class="name">ЖК «Central Park», г.
+                                        Уфа</span>
+                                    <div class="swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/4/4 (2).jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/4/4 (3).jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/4/4 (4).jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/4/4 (5).jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/4/4 (6).jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/4/4 (7).jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/4/4 (8).jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/4/4 (9).jpg"
+                                                     alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item"
+                             x-data="{
+                                swiper: 0,
+                                galleryOpen: false,
+                                 }">
+                            <div class="main-img" @click="galleryOpen=true">
+                                <img src="img/projects/5/001_001_570.jpg"
+                                     alt="">
+                            </div>
+                            <span class="name">Офис "Контрольный пакет"</span>
+                            <div class="modal-wrap" x-show="galleryOpen" x-transition.opacity>
+                                <div class="gallery"
+                                     id="gal-2"
+                                     @click.away="galleryOpen=false"
+                                     x-init="
+                                     swiper = new Swiper('#gal-2 .swiper', {
+                                        direction: 'horizontal',
+                                        loop: true,
+                                        spaceBetween: 8,
+                                        pagination: {
+                                            el: '.swiper-pagination',
+                                            type: 'fraction',
+                                        },
+                                        navigation: {
+                                            nextEl: '.swiper-button-next',
+                                            prevEl: '.swiper-button-prev',
+                                        },
+                                        });">
+                                    <button class="close"
+                                            @click="galleryOpen=false">
+                                        <i class="uil uil-multiply"></i>
+                                    </button>
+                                    <span class="name">Офис "Контрольный
+                                        пакет"</span>
+                                    <div class="swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/5/001_001_570.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/5/002_501.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/5/003_386.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/5/004_867.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/5/005_138.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/5/006_558.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/5/007_887.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/5/008_86.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/5/009_353.jpg"
+                                                     alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item"
+                             x-data="{
+                                swiper: 0,
+                                galleryOpen: false,
+                                 }">
+                            <div class="main-img" @click="galleryOpen=true">
+                                <img src="img/projects/6/001_164.jpg" alt="">
+                            </div>
+                            <span class="name">Таунхаус в г. Уфа</span>
+                            <div class="modal-wrap" x-show="galleryOpen" x-transition.opacity>
+                                <div class="gallery"
+                                     id="gal-2"
+                                     @click.away="galleryOpen=false"
+                                     x-init="
+                                     swiper = new Swiper('#gal-2 .swiper', {
+                                        direction: 'horizontal',
+                                        loop: true,
+                                        spaceBetween: 8,
+                                        pagination: {
+                                            el: '.swiper-pagination',
+                                            type: 'fraction',
+                                        },
+                                        navigation: {
+                                            nextEl: '.swiper-button-next',
+                                            prevEl: '.swiper-button-prev',
+                                        },
+                                        });">
+                                    <button class="close"
+                                            @click="galleryOpen=false">
+                                        <i class="uil uil-multiply"></i>
+                                    </button>
+                                    <span class="name">Таунхаус в г. Уфа</span>
+                                    <div class="swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/6/001_164.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/6/002_321.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/6/003_4.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/6/004_536.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/6/005_259.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/6/007_613.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/6/008_748.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/6/009_169.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/6/010_884.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/6/012_648.jpg"
+                                                     alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/projects/6/013_119.jpg"
+                                                     alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="stages" id="stages">
+                <div class="container">
+                    <h2>Этапы работы</h2>
+                    <div class="items">
+                        <div class="item">
+                            <div class="icon-group">
+                                <span class="digit">1</span>
+                                <i class="uil uil-ruler-combined"></i>
+                            </div>
+                            <span class="title">Разработка планировочных решений
+                                с расстановкой мебели и сантехнического
+                                оборудования. Перепланировка.</span>
+                            <p>На данном этапе Вам будет предложено 4 варианта
+                                планировочных решений, каждый вариант будет
+                                подробно обсуждаться при встрече, после чего
+                                выберем один, наиболее оптимальный, с которым
+                                продолжим дальнейшую работу.</p>
+                        </div>
+                        <div class="item">
+                            <div class="icon-group">
+                                <span class="digit">2</span>
+                                <i class="uil uil-cube"></i>
+                            </div>
+                            <span class="title">Разработка фотореалистичной 3D
+                                визуализации с использованием реальных
+                                отделочных материалов.</span>
+                            <p>На каждую комнату будет разработана визуализация,
+                                благодаря которой Вы сможете представить до
+                                мельчайших подробностей, как будет выглядеть дом
+                                после ремонта и, в случае необходимости, внести
+                                корректировки по цвету на этапе проектирования.
+                            </p>
+                        </div>
+                        <div class="item">
+                            <div class="icon-group">
+                                <span class="digit">3</span>
+                                <i class="uil uil-edit"></i>
+                            </div>
+                            <span class="title">Разработка чертежной
+                                документации, необходимой строителям для
+                                воплощения проекта в жизнь.</span>
+                            <p>Мы составляем полный пакет чертежной
+                                документации. Здесь будут отражены все
+                                особенности ремонта Вашей квартиры или дома.
+                                Благодаря полному объему чертежей Вы сможете
+                                избежать значительных ошибок при ремонте и
+                                сэкономите не малую сумму благодаря точному
+                                просчету количества необходимых отделочных
+                                материалов.</p>
+                        </div>
+                        <div class="item">
+                            <div class="icon-group">
+                                <span class="digit">4</span>
+                                <i class="uil uil-paint-tool"></i>
+                            </div>
+                            <span class="title">Начало ремонтных работ.
+                                Авторский надзор.</span>
+                            <p>Бригада начинает ремонт. Не смотря на полный и
+                                развернутый проект, часто в ходе ремонтных работ
+                                у строителей могут возникать вопросы
+                                относительно реализации проекта, тогда на помощь
+                                приходит дизайнер, и все вопросы решатся быстро
+                                и оперативно.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="reviews" id="reviews">
+                <div class="container">
+                    <h2>Отзывы</h2>
+                    <div class="items">
+                        <div class="swiper reviews-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <span class="name">Лира</span>
+                                        <span class="title">Дизайн-проект
+                                            квартиры в ЖК «Квартал Мира», г.
+                                            Уфа</span>
+                                        <p>
+                                            Хочу выразить искреннюю
+                                            благодарность студии "Пряничный
+                                            домик" за дизайн проект
+                                            квартиры. Работа выполнялась
+                                            поэтапно, каждый элемент четко
+                                            прорабатывался, дизайнер Дарья чутко
+                                            реагировала на все наши пожелания.
+                                            Благодаря ее профессиональному
+                                            подходу в выборе цветовой гаммы,
+                                            обоев, плитки, расстановки мебели
+                                            квартира получилась очень уютной,
+                                            стильной и красивой.
+                                        </p>
+                                        <div class="image">
+                                            <img src="img/projects/3/0000_895.jpg"
+                                                 alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <span class="name">Алина</span>
+                                        <span class="title">Дизайн-проект офиса
+                                            "Контрольный пакет" г. Уфа</span>
+                                        <p>
+                                            Спасибо специалистам студии за
+                                            необычный и
+                                            индивидуальный дизайн проекта нашего
+                                            офиса.
+                                            Сочетание ярких цветов и акцентов
+                                            для меня
+                                            изначально было не свойственно, но
+                                            на деле
+                                            оказалось все гармонично и близко!!!
+                                            Хотя я не
+                                            участвовала в процессе ремонта, все
+                                            получилось
+                                            как нельзя лучше!
+                                        </p>
+                                        <div class="image">
+                                            <img src="img/projects/5/001_001_570.jpg"
+                                                 alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <span class="name">Илья</span>
+                                        <span class="title">Дизайн-проект
+                                            квартиры в ЖК «Tau House», г.
+                                            Уфа</span>
+                                        <p>
+                                            К дизайнерам из студии "Пряничный
+                                            домик" я обратился по
+                                            вопросу ремонта моей квартиры
+                                            студии. Дизайн-проект это полный
+                                            комплект всех технических моментов
+                                            для строителей, а так же общая
+                                            картина с расстановкой мебели, штор,
+                                            люстр и т.д. С очень красивыми и
+                                            живыми рендарами(как будет выглядеть
+                                            квартира). Даже представить себе не
+                                            мог что в моей квартире можно
+                                            вместить все то, что в конечном
+                                            итоге удалось дизайнеру Дарье. Она
+                                            взяла все
+                                            мои пожелания и сделала из них
+                                            шедевр. Очень доволен своим выбором
+                                            и надеюсь что обращусь к вам еще :)
+                                        </p>
+                                        <div class="image">
+                                            <img src="img/projects/1/001__461.jpg"
+                                                 alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="contacts" id="contacts">
+                <div class="container">
+                    <h2>Контакты</h2>
+                    <div class="items">
+                        <div class="text">
+                            <span class="address">
+                                <i class="uil uil-map-marker-alt"></i>
+                                г. Уфа, ул. Ленина д. 28
+                            </span>
+                            <span class="workhours">
+                                <i class="uil uil-clock"></i>
+                                Пн—Cб: 10:00—19:00
+                            </span>
+                            <a href="mailto:info@domik.ru">
+                                <i class="uil uil-envelope"></i>
+                                info@domik.ru
+                            </a>
+                            <a href="tel:+74952780000">
+                                <i class="uil uil-phone-alt"></i>
+                                8 495 278-00-00
+                            </a>
+                            <div class="social">
+                                Соцсети:
+                                <a href="https://vk.com/">
+                                    <i class="uil uil-vk-alt"></i>
+                                </a>
+                                <a href="https://whatsapp.com/">
+                                    <i class="uil uil-whatsapp"></i>
+                                </a>
+                                <a href="https://telegram.org/">
+                                    <i class="uil uil-telegram-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <form id="callback"
+                              action="" class="callback"
+                              @click.away="callbackOpen=false"
+                              @submit.prevent="
+                              $el.reset();
+                              alert('Спасибо за заявку!');">
+                            <span>Форма заявки</span>
+                            <input type="text" name="name"
+                                   placeholder="Ваше имя"
+                                   required="" pattern="^[А-Яа-яЁё ]+$">
+                            <input type="text" name="phone"
+                                   placeholder="Номер телефона"
+                                   required="" pattern="[0-9+]{11,12}"
+                                   maxlength="12">
+                            <p class="privacy">Нажимая на кнопку «Отправить», вы
+                                принимаете условия политики конфиденциальности
+                            </p>
+                            <input class="base-button" type="submit"
+                                   value="Отправить">
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="footer-menu">
+                    <a href="" class="logo">
+                        <img src="img/logo-house.png" alt="">
+                        <span class="logo-name">Пряничный домик</span>
+                        <span class="logo-studio">студия интерьера</span>
+                    </a>
+                    <div class="items">
+                        <a href="#about">О компании</a>
+                        <a href="#services">Услуги и цены</a>
+                        <a href="#projects">Проекты</a>
+                        <a href="#stages">Этапы работ</a>
+                        <a href="#reviews">Отзывы</a>
+                        <a href="#contacts">Контакты</a>
+                    </div>
+                    <div class="copyright">
+                        © 2024 Студия интерьера «Пряничный домик».<br>
+                        Все права защищены.
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+
+        <script>
+            const thumbsSwiper = new Swiper('.hero .thumbs-swiper', {
+                direction: 'horizontal',
+                loop: true,
+                spaceBetween: 48,
+                slidesPerView: 3,
+            });
+            const mainSwiper = new Swiper('.hero .main-swiper', {
+                direction: 'horizontal',
+                loop: true,
+                thumbs: {
+                    swiper: thumbsSwiper,
+                },
+            });
+            const reviewsSwiper = new Swiper('.reviews .swiper', {
+                direction: 'horizontal',
+                loop: true,
+                effect: "fade",
+                autoplay: {
+                    delay: 5000,
+                    pauseOnMouseEnter: true,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+        </script>
+    </body>
+
+</html>
