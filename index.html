@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport"
               content="width=device-width, initial-scale=1, minimum-scale=1">
+        <link rel="icon" type="image/png" href="img/favicon.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
@@ -14,14 +15,13 @@
               href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
         <link
               rel="stylesheet"
-              href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+              href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
         <script
                 src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script defer
                 src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
         <title>Студия интерьера "Пряничный домик"</title>
-        <link rel="icon" type="image/png" href="img/favicon.png?">
     </head>
 
     <body x-data="{ yCoord: window.pageYOffset, mobileOpen: false }"
@@ -82,7 +82,8 @@
                 <div class="mobile-menu" @click="mobileOpen=!mobileOpen">
                     <i class="uil uil-bars"></i>
                 </div>
-                <div class="mobile-items" x-show="mobileOpen" x-transition.opacity>
+                <div class="mobile-items" x-show="mobileOpen"
+                     x-transition.opacity>
                     <a href="#about">О компании</a>
                     <a href="#services">Услуги и цены</a>
                     <a href="#projects">Проекты</a>
@@ -254,7 +255,8 @@
                                 <img src="img/projects/1/001__461.jpg" alt="">
                             </div>
                             <span class="name">ЖК «Tau House», г. Уфа</span>
-                            <div class="modal-wrap" x-show="galleryOpen" x-transition.opacity>
+                            <div class="modal-wrap" x-show="galleryOpen"
+                                 x-transition.opacity>
                                 <div class="gallery"
                                      id="gal-1"
                                      @click.away="galleryOpen=false"
@@ -337,7 +339,8 @@
                                 <img src="img/projects/3/0000_895.jpg" alt="">
                             </div>
                             <span class="name">ЖК «River Sky», г. Москва</span>
-                            <div class="modal-wrap" x-show="galleryOpen" x-transition.opacity>
+                            <div class="modal-wrap" x-show="galleryOpen"
+                                 x-transition.opacity>
                                 <div class="gallery"
                                      id="gal-2"
                                      @click.away="galleryOpen=false"
@@ -424,7 +427,8 @@
                                 <img src="img/projects/2/2 (1).jpg" alt="">
                             </div>
                             <span class="name">ЖК «Квартал Мира», г. Уфа</span>
-                            <div class="modal-wrap" x-show="galleryOpen" x-transition.opacity>
+                            <div class="modal-wrap" x-show="galleryOpen"
+                                 x-transition.opacity>
                                 <div class="gallery"
                                      id="gal-2"
                                      @click.away="galleryOpen=false"
@@ -500,7 +504,8 @@
                                 <img src="img/projects/4/4 (1).jpg" alt="">
                             </div>
                             <span class="name">ЖК «Central Park», г. Уфа</span>
-                            <div class="modal-wrap" x-show="galleryOpen" x-transition.opacity>
+                            <div class="modal-wrap" x-show="galleryOpen"
+                                 x-transition.opacity>
                                 <div class="gallery"
                                      id="gal-2"
                                      @click.away="galleryOpen=false"
@@ -577,7 +582,8 @@
                                      alt="">
                             </div>
                             <span class="name">Офис "Контрольный пакет"</span>
-                            <div class="modal-wrap" x-show="galleryOpen" x-transition.opacity>
+                            <div class="modal-wrap" x-show="galleryOpen"
+                                 x-transition.opacity>
                                 <div class="gallery"
                                      id="gal-2"
                                      @click.away="galleryOpen=false"
@@ -657,7 +663,8 @@
                                 <img src="img/projects/6/001_164.jpg" alt="">
                             </div>
                             <span class="name">Таунхаус в г. Уфа</span>
-                            <div class="modal-wrap" x-show="galleryOpen" x-transition.opacity>
+                            <div class="modal-wrap" x-show="galleryOpen"
+                                 x-transition.opacity>
                                 <div class="gallery"
                                      id="gal-2"
                                      @click.away="galleryOpen=false"
